@@ -1,0 +1,17 @@
+{
+    "autoload" : {
+        "psr-4": {
+            "TestePratico\\Domain\\Interfaces\\" : "src/Domain/Interfaces",
+            "TestePratico\\AppServices\\Interfaces\\" : "src/AppServices/Interfaces",
+            "TestePratico\\AppServices\\" : "src/AppServices",
+            "TestePratico\\Api\\Controllers\\" : "src/Api/Controllers",
+            "TestePratico\\CrossCutting\\IoC\\" : "src/CrossCutting/IoC",
+            "TestePratico\\Api\\Retorno\\" : "src/Api/Retorno",
+            "TestePratico\\Services\\" : "src/Services"
+        }
+    },
+    "require": {
+        "pimple/pimple": "~3.0",
+        "phpseclib/phpseclib": "^2.0"
+    }
+}
