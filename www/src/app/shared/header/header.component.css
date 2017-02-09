@@ -1,0 +1,12 @@
+
+header {
+   background:  rgb(0,80,102)!important;
+    border-bottom-color: rgb(0,80,102)!important;
+    border-top-color: rgb(0,80,102)!important;
+}
+
+header .separator{
+    background-color: #ddd;
+    background-image: -webkit-linear-gradient(#ddd 10%, #ddd);
+    background-image: linear-gradient(#ddd 10%, #ddd);
+}
