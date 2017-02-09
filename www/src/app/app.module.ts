@@ -13,6 +13,7 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { BreadcrumbService } from './shared/breadcrumb/breadcrumb.service';
+import { CriptografiaService } from './criptografia/criptografia.service';
 import { SshComponent } from './ssh/ssh.component';
 import { CriptografiaComponent } from './criptografia/criptografia.component';
 import { AuditoriaComponent } from './auditoria/auditoria.component';
@@ -36,7 +37,7 @@ import { AuditoriaComponent } from './auditoria/auditoria.component';
     HttpModule,
     AppRoutingModule,
   ],
-  providers: [BreadcrumbService],
+  providers: [BreadcrumbService, CriptografiaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

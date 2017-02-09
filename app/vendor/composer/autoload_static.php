@@ -17,7 +17,13 @@ class ComposerStaticInit63f909c12b898553123d7e935f1e38f7
         ),
         'T' => 
         array (
+            'TestePratico\\Services\\SSH\\Interfaces\\' => 37,
+            'TestePratico\\Services\\SSH\\' => 26,
             'TestePratico\\Services\\Interfaces\\' => 33,
+            'TestePratico\\Services\\Criptografia\\Interfaces\\' => 46,
+            'TestePratico\\Services\\Criptografia\\' => 35,
+            'TestePratico\\Services\\Auditoria\\Interfaces\\' => 43,
+            'TestePratico\\Services\\Auditoria\\' => 32,
             'TestePratico\\Services\\' => 22,
             'TestePratico\\Infrastructure\\Data\\Repositories\\' => 46,
             'TestePratico\\Infrastructure\\Data\\Database\\' => 42,
@@ -37,9 +43,33 @@ class ComposerStaticInit63f909c12b898553123d7e935f1e38f7
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
+        'TestePratico\\Services\\SSH\\Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/SSH/Interfaces',
+        ),
+        'TestePratico\\Services\\SSH\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/SSH',
+        ),
         'TestePratico\\Services\\Interfaces\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Services/Interfaces',
+        ),
+        'TestePratico\\Services\\Criptografia\\Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/Criptografia/Interfaces',
+        ),
+        'TestePratico\\Services\\Criptografia\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/Criptografia',
+        ),
+        'TestePratico\\Services\\Auditoria\\Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/Auditoria/Interfaces',
+        ),
+        'TestePratico\\Services\\Auditoria\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/Auditoria',
         ),
         'TestePratico\\Services\\' => 
         array (

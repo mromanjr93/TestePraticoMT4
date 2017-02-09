@@ -35,8 +35,7 @@ class CriptografiaController extends ApiController {
                 return $this->retorno->response();
         }
 
-        function descriptografar_post(){
-
+        function descriptografar_post(){                                
                 $oCriptografiaDto = json_decode(file_get_contents("PHP://INPUT")) ;
                 $oCriptografiaDto = MapperFactory::mapTo($oCriptografiaDto, '\TestePratico\AppServices\Dtos\CriptografiaDto');
                

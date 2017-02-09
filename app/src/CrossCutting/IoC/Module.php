@@ -8,9 +8,9 @@ use TestePratico\AppServices\SSHAppService;
 use TestePratico\AppServices\CriptografiaAppService;
 use TestePratico\AppServices\AuditoriaAppService;
 
-use TestePratico\Services\CriptografiaService;
-use TestePratico\Services\SSHService;
-use TestePratico\Services\AuditoriaService;
+use TestePratico\Services\Criptografia\CriptografiaService;
+use TestePratico\Services\SSH\SSHService;
+use TestePratico\Services\Auditoria\AuditoriaService;
 
 use TestePratico\Infrastructure\Data\Database\Conexao;
 use TestePratico\Infrastructure\Data\Repositories\AuditoriaRepository;

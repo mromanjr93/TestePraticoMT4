@@ -1,6 +1,6 @@
 <?php
 
-namespace TestePratico\Services\Interfaces;
+namespace TestePratico\Services\Criptografia\Interfaces;
 
 use TestePratico\Domain\Entities\Criptografia;
 

@@ -50,7 +50,7 @@ class ApiController
         case 'PUT':
             $this->request = $this->_cleanInputs($_GET);
             $this->file = json_decode(file_get_contents("php://input"));
-            break;
+            break;        
         default:
             $this->_response('Invalid Method', 405);
             break;
