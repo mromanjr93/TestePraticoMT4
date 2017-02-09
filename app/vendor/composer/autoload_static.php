@@ -17,9 +17,14 @@ class ComposerStaticInit63f909c12b898553123d7e935f1e38f7
         ),
         'T' => 
         array (
+            'TestePratico\\Services\\Interfaces\\' => 33,
             'TestePratico\\Services\\' => 22,
+            'TestePratico\\Infrastructure\\Data\\Repositories\\' => 46,
+            'TestePratico\\Infrastructure\\Data\\Database\\' => 42,
             'TestePratico\\Domain\\Interfaces\\' => 31,
+            'TestePratico\\Domain\\Entities\\' => 29,
             'TestePratico\\CrossCutting\\IoC\\' => 30,
+            'TestePratico\\AppServices\\Mappings\\' => 34,
             'TestePratico\\AppServices\\Interfaces\\' => 36,
             'TestePratico\\AppServices\\' => 25,
             'TestePratico\\Api\\Retorno\\' => 25,
@@ -32,17 +37,37 @@ class ComposerStaticInit63f909c12b898553123d7e935f1e38f7
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
+        'TestePratico\\Services\\Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/Interfaces',
+        ),
         'TestePratico\\Services\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Services',
+        ),
+        'TestePratico\\Infrastructure\\Data\\Repositories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Infrastructure/Data/Repositories',
+        ),
+        'TestePratico\\Infrastructure\\Data\\Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Infrastructure/Data/Database',
         ),
         'TestePratico\\Domain\\Interfaces\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Domain/Interfaces',
         ),
+        'TestePratico\\Domain\\Entities\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Domain/Entities',
+        ),
         'TestePratico\\CrossCutting\\IoC\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/CrossCutting/IoC',
+        ),
+        'TestePratico\\AppServices\\Mappings\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/AppServices/Mappings',
         ),
         'TestePratico\\AppServices\\Interfaces\\' => 
         array (

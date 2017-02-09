@@ -9,6 +9,7 @@ class RetornoApi {
 
 
     public function response(){
+        header('Content-Type: application/json');
         return json_encode($this);
     }
 }

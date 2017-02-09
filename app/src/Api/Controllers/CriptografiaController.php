@@ -6,6 +6,7 @@ namespace TestePratico\Api\Controllers;
 use TestePratico\Api\Retorno\RetornoApi;
 use TestePratico\AppServices\CriptografiaAppService;
 use TestePratico\AppServices\Dtos\CriptografiaDto;
+use TestePratico\AppServices\Mappings\MapperFactory;
 
 class CriptografiaController extends ApiController {
 
@@ -18,22 +19,35 @@ class CriptografiaController extends ApiController {
                 $this->retorno = new RetornoApi;                               
         }  
 
-        function criptografar_get(){
-                $dto = new CriptografiaDto();
-                var_dump($dto instanceof CriptografiaDto);
-                $dto->texto = "asasas";
-                $dto->chave = "312313234534535345345wed";
+        function criptografar_post(){
+                $oCriptografiaDto = json_decode(file_get_contents("PHP://INPUT")) ;
+                $oCriptografiaDto = MapperFactory::mapTo($oCriptografiaDto, '\TestePratico\AppServices\Dtos\CriptografiaDto');
+
+               
                 try {
-                     var_dump($this->appService->criptografar($dto)) ;
-                        
+                                        
+                     $this->retorno->resultado = $this->appService->criptografar($oCriptografiaDto);                        
+                     $this->retorno->sucesso = true;
                 }
-                catch(Exception $ex){
+                catch(ErrorException $ex){
 
                 }
-                return "as";
+                return $this->retorno->response();
         }
 
-        function descriptografar_get(){
+        function descriptografar_post(){
+
+                $oCriptografiaDto = json_decode(file_get_contents("PHP://INPUT")) ;
+                $oCriptografiaDto = MapperFactory::mapTo($oCriptografiaDto, '\TestePratico\AppServices\Dtos\CriptografiaDto');
+               
+                try {                                        
+                     $this->retorno->resultado = $this->appService->descriptografar($oCriptografiaDto);                        
+                     $this->retorno->sucesso = true;
+                }
+                catch(ErrorException $ex){
+
+                }
+                return $this->retorno->response();
 
         }
 }

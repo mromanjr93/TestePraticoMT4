@@ -7,9 +7,14 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'phpseclib\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'TestePratico\\Services\\Interfaces\\' => array($baseDir . '/src/Services/Interfaces'),
     'TestePratico\\Services\\' => array($baseDir . '/src/Services'),
+    'TestePratico\\Infrastructure\\Data\\Repositories\\' => array($baseDir . '/src/Infrastructure/Data/Repositories'),
+    'TestePratico\\Infrastructure\\Data\\Database\\' => array($baseDir . '/src/Infrastructure/Data/Database'),
     'TestePratico\\Domain\\Interfaces\\' => array($baseDir . '/src/Domain/Interfaces'),
+    'TestePratico\\Domain\\Entities\\' => array($baseDir . '/src/Domain/Entities'),
     'TestePratico\\CrossCutting\\IoC\\' => array($baseDir . '/src/CrossCutting/IoC'),
+    'TestePratico\\AppServices\\Mappings\\' => array($baseDir . '/src/AppServices/Mappings'),
     'TestePratico\\AppServices\\Interfaces\\' => array($baseDir . '/src/AppServices/Interfaces'),
     'TestePratico\\AppServices\\' => array($baseDir . '/src/AppServices'),
     'TestePratico\\Api\\Retorno\\' => array($baseDir . '/src/Api/Retorno'),

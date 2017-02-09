@@ -7,7 +7,12 @@
             "TestePratico\\Api\\Controllers\\" : "src/Api/Controllers",
             "TestePratico\\CrossCutting\\IoC\\" : "src/CrossCutting/IoC",
             "TestePratico\\Api\\Retorno\\" : "src/Api/Retorno",
-            "TestePratico\\Services\\" : "src/Services"
+            "TestePratico\\Services\\" : "src/Services",            
+            "TestePratico\\Services\\Interfaces\\" : "src/Services/Interfaces",            
+            "TestePratico\\AppServices\\Mappings\\" : "src/AppServices/Mappings",
+            "TestePratico\\Domain\\Entities\\" : "src/Domain/Entities",
+            "TestePratico\\Infrastructure\\Data\\Database\\" : "src/Infrastructure/Data/Database",            
+            "TestePratico\\Infrastructure\\Data\\Repositories\\" : "src/Infrastructure/Data/Repositories"
         }
     },
     "require": {

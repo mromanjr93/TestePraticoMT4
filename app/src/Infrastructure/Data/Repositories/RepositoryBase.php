@@ -2,9 +2,11 @@
 
 namespace TestePratico\Infrastructure\Data\Repositories;
 
-abstract class RepositoryBase {
+use TestePratico\Infrastructure\Data\Database\Conexao;
 
-    public function __constructor(){
+abstract class RepositoryBase {
+    
+    public function __constructor(Conexao $conexao){
         
     }
 }

@@ -6,6 +6,8 @@ namespace TestePratico\AppServices;
 use \TestePratico\AppServices\Interfaces\ICriptografiaAppService;
 use \TestePratico\AppServices\Dtos\CriptografiaDto;
 use \TestePratico\Services\CriptografiaService;
+use TestePratico\AppServices\Mappings\MapperFactory;
+use \TestePratico\Domain\Entities\Criptografia;
 
 class CriptografiaAppService implements ICriptografiaAppService {
 
@@ -14,8 +16,11 @@ class CriptografiaAppService implements ICriptografiaAppService {
         $this->service = $service;
     }
 
-    public function criptografar(CriptografiaDto $model) {            
-        return $this->service->criptografar($model);       
+    public function criptografar(CriptografiaDto $model) {   
+
+        $criptografiaModel = MapperFactory::mapTo($model, '\TestePratico\Domain\Entities\Criptografia');
+
+        return $this->service->criptografar($criptografiaModel);
     }
 
     
