@@ -2,6 +2,13 @@
 namespace TestePratico\Services\SSH\Interfaces;
 
 
+/**
+ * Interface de conexão de SSH
+ *
+ * @package	TestePratico\Services\SSH\Interfaces
+ * @category	Services
+ * @author	Marcelo Roman Junior 
+ */
 interface ISSHConnection {
         /**
          * Autentica um usuário

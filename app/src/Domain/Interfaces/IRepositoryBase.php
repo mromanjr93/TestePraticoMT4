@@ -2,6 +2,13 @@
 
 namespace TestePratico\Domain\Interfaces;
 
+/**
+ * Interface de base de repositório - Auditoria 
+ *
+ * @package		TestePratico\Domain\Interfaces
+ * @category	Domain
+ * @author		Marcelo Roman Junior 
+ */
 interface IRepositoryBase {
 
      public function inserir($model);

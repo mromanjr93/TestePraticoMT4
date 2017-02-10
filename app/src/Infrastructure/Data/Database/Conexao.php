@@ -2,6 +2,13 @@
 
 namespace TestePratico\Infrastructure\Data\Database;
 
+/**
+ * Classe base de conexão requerida pelos repositórios 
+ *
+ * @package		TestePratico\Infrastructure\Database
+ * @category	Infra
+ * @author		Marcelo Roman Junior 
+ */
 class Conexao extends \PDO
 {
     public function __construct($file = 'configuracoes.ini')

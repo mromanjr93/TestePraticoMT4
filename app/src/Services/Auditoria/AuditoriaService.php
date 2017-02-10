@@ -1,8 +1,8 @@
 <?php
 
-namespace TestePratico\Services;
+namespace TestePratico\Services\Auditoria;
 
-use TestePratico\Services\Interfaces\IAuditoriaService;
+use TestePratico\Services\Auditoria\Interfaces\IAuditoriaService;
 use TestePratico\Domain\Entities\Auditoria;
 use TestePratico\Infrastructure\Data\Repositories\AuditoriaRepository;
 class AuditoriaService implements IAuditoriaService {

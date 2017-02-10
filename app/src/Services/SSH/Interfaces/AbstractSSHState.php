@@ -1,6 +1,13 @@
 <?php
 namespace TestePratico\Services\SSH\Interfaces;
 
+/**
+ * Classe abstrata de estado de SSH
+ *
+ * @package	TestePratico\Services\SSH\Interfaces
+ * @category	Services
+ * @author	Marcelo Roman Junior 
+ */
 abstract class AbstractSSHState implements ISSHState {
         /**
          * @var resource

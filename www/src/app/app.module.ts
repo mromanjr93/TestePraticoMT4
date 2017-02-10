@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import { Uploader }      from 'angular2-http-file-upload';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module'; 
 import { AppComponent } from './app.component';
@@ -37,7 +38,7 @@ import { AuditoriaComponent } from './auditoria/auditoria.component';
     HttpModule,
     AppRoutingModule,
   ],
-  providers: [BreadcrumbService, CriptografiaService],
+  providers: [BreadcrumbService, CriptografiaService, Uploader],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

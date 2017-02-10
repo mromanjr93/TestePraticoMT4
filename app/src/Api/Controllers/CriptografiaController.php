@@ -8,6 +8,16 @@ use TestePratico\AppServices\CriptografiaAppService;
 use TestePratico\AppServices\Dtos\CriptografiaDto;
 use TestePratico\AppServices\Mappings\MapperFactory;
 
+
+/**
+ * Controller de API Rest - Auditoria 
+ * Possui os métodos de criptografar e descriptografar textos
+ *
+ * @package		TestePratico\Api\Controllers; 
+ * @category	API
+ * @author		Marcelo Roman Junior 
+ */
+
 class CriptografiaController extends ApiController {
 
         private $appService;
@@ -29,7 +39,8 @@ class CriptografiaController extends ApiController {
                      $this->retorno->sucesso = true;
                 }
                 catch(ErrorException $ex){
-
+                        $this->retorno->sucesso = false;
+                        $this->retorno->erros = [$ex->getMessage()];
                 }
                 return $this->_response($this->retorno,200);
         }

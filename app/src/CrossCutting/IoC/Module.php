@@ -16,6 +16,13 @@ use TestePratico\Infrastructure\Data\Database\Conexao;
 use TestePratico\Infrastructure\Data\Repositories\AuditoriaRepository;
 
 
+/**
+ * Aqui implemento de fato o conceito de injeção de dependencia e resolvo todos os tipos passados em construtores. 
+ *
+ * @package		TestePratico\CrossCutting
+ * @category	AppServices
+ * @author		Marcelo Roman Junior 
+ */
 class Module {
 
     public $container;

@@ -2,6 +2,14 @@
 
 namespace TestePratico\Api\Controllers;
 
+/**
+ * Classe base de API Rest
+ *
+ * @package		TestePratico\Api\Controllers; 
+ * @category	API
+ * @author		Marcelo Roman Junior 
+ */
+
 class ApiController
 {
     protected $method = '';
@@ -12,18 +20,17 @@ class ApiController
     public function __construct($request) {
         
         if (isset($_SERVER['HTTP_ORIGIN'])) {
-            // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
-            // you want to allow, and if so:
+ 
             header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
             header('Access-Control-Allow-Credentials: true');
-            header('Access-Control-Max-Age: 86400');    // cache for 1 day
+            header('Access-Control-Max-Age: 86400');
         }
 
-        // Access-Control headers are received during OPTIONS requests
+        
         if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
             if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
-                // may also be using PUT, PATCH, HEAD etc
+                
                 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
 
             if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
@@ -39,9 +46,7 @@ class ApiController
         
         
         $this->method = $_SERVER['REQUEST_METHOD'];        
-        // if($this->method == 'OPTIONS'){
-        //     $this->method = $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'];            
-        // }
+      
         
         $this->endpoint .= '_'.strtolower($this->method);
         

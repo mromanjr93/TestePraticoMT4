@@ -9,7 +9,7 @@
             "TestePratico\\Api\\Retorno\\" : "src/Api/Retorno",
             "TestePratico\\Services\\" : "src/Services",     
             "TestePratico\\Services\\Auditoria\\" : "src/Services/Auditoria",     
-            "TestePratico\\Services\\Auditoria\\Interfaces\\" : "src/Services/Auditoria/Interfaces",     
+            "TestePratico\\Services\\Auditoria\\Interfaces\\" : "src/Services/Auditoria/Interfaces",               
             "TestePratico\\Services\\Criptografia\\" : "src/Services/Criptografia",     
             "TestePratico\\Services\\Criptografia\\Interfaces\\" : "src/Services/Criptografia/Interfaces",     
             "TestePratico\\Services\\SSH\\" : "src/Services/SSH",     

@@ -2,7 +2,11 @@
     <div class="panel-heading">
         Auditoria de arquivos
         <div class="panel-actions">
-            <button class="btn btn-primary btn-sm"><i class="fa fa-plus fa-fw"></i>Upload</button>
+            <form #form="ngForm" (ngSubmit)="upload()">
+                <input type="file" id="upload" name="upload">
+                <button type="submit">Enviar</button>
+                
+            </form>
         </div>
     </div>
 

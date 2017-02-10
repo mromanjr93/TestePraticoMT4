@@ -2,6 +2,14 @@
 
 namespace TestePratico\Services\SSH\Interfaces;
 
+
+/**
+ * Interface de estado de SSH
+ *
+ * @package	TestePratico\Services\SSH\Interfaces
+ * @category	Services
+ * @author	Marcelo Roman Junior 
+ */
 interface ISSHState {
         /**
          * Autentica o usuário

@@ -9,6 +9,15 @@ use \TestePratico\Services\Criptografia\CriptografiaService;
 use TestePratico\AppServices\Mappings\MapperFactory;
 use \TestePratico\Domain\Entities\Criptografia;
 
+/**
+ * AppService de Criptografia
+ * Esta AppService faz o mapeamento de objetos para exemplificar o Design Pattern Mapper
+ * E seguindo o conceito de DDD, para a responsabilidade para a camada de serviço
+ *
+ * @package		TestePratico\AppServices
+ * @category	AppServices
+ * @author		Marcelo Roman Junior 
+ */
 class CriptografiaAppService implements ICriptografiaAppService {
 
     private $service;

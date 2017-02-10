@@ -2,6 +2,14 @@
 
 namespace TestePratico\AppServices\Mappings;
 
+
+/**
+ * Classe adotando o Design Pattern Factory para criar instancias de Mapeamento de DTO para Dominio, e vice-versa
+ *
+ * @package		TestePratico\AppServices\Mappings
+ * @category	AppServices
+ * @author		Marcelo Roman Junior 
+ */
 class MapperFactory {
 
     public static function  mapTo($model, $objetoDestino){

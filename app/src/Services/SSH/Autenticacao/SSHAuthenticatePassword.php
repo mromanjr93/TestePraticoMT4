@@ -3,6 +3,13 @@ namespace TestePratico\Services\SSH\Autenticacao;
 
 use TestePratico\Services\SSH\Interfaces\ISSHAuthentication;
 
+/**
+ * Classe final de Autenticação de SSH
+ *
+ * @package		TestePratico\Domain\Interfaces
+ * @category	Domain
+ * @author		Marcelo Roman Junior 
+ */
 final class SSHAuthenticatePassword implements ISSHAuthentication {
         /**
          * @var string

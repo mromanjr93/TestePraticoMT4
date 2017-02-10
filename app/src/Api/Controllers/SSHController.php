@@ -7,6 +7,14 @@ use TestePratico\Api\Retorno\RetornoApi;
 use TestePratico\AppServices\SSHAppService;
 use TestePratico\AppServices\Mappings\MapperFactory;
 
+/**
+ * Controller de API Rest - SSH 
+ * Recebe uma DTO de SSH com usuário, host e senha, e realiza a conexão para executar comandos.
+ *
+ * @package		TestePratico\Api\Controllers; 
+ * @category	API
+ * @author		Marcelo Roman Junior 
+ */
 
 class SSHController extends ApiController {
 
