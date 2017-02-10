@@ -9,6 +9,8 @@ Este trabalho foi realizado com o intuito de demonstrar minha forma de desenvolv
   - DDD (Domain-Driven Design)
   - IoC - DI
   - Mapper
+  - Factory
+  - Tentei seguir o SOLID
   - ReflectionClass
   - ssh_connect2
   - Composer (para gerar autoloads) - Não foi utilizado nenhum framework
