@@ -17,7 +17,7 @@ final class SSHStateEstabilished extends AbstractSSHState {
          */
         public function authenticate( ISSHAuthentication $auth , ISSHConnection $context ){
                 if ( !$auth->authenticate( $this->resource ) ){
-                        throw new RuntimeException( sprintf( 'Não foi possível autenticar o usuário %s.' , $auth->getUser() ) );
+                        throw new \RuntimeException( sprintf( 'Não foi possível autenticar o usuário %s.' , $auth->getUser() ) );
                 } else {
                         $authenticated = new SSHStateListen();
                         $authenticated->setResource( $this->resource );

@@ -2,9 +2,9 @@
 
 namespace TestePratico\Services\SSH\States;
 
-use App\Lib\ssh\interfaces\AbstractSSHState;
+use TestePratico\Services\SSH\Interfaces\AbstractSSHState;
 
-use App\Lib\ssh\interfaces\ISSHConnection;
+use TestePratico\Services\SSH\Interfaces\ISSHConnection;
 
 final class SSHStateClosed extends AbstractSSHState {
         /**
@@ -28,7 +28,7 @@ final class SSHStateClosed extends AbstractSSHState {
                 ) );
  
                 if ( !is_resource( $resource ) ){
-                        throw new \RuntimeException( 'Não foi possível estabelecer a conexção.' );
+                        throw new \RuntimeException( 'Não foi possível estabelecer a conexão.' );
                 } else {
                         $estabilished = new SSHStateEstabilished();
                         $estabilished->setResource( $resource );

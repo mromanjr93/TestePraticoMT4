@@ -15,7 +15,6 @@ class CriptografiaController extends ApiController {
         public function __construct(CriptografiaAppService $appService) {
                 parent::__construct($_SERVER['PATH_INFO']);                                                
                 $this->appService = $appService; 
-
                 $this->retorno = new RetornoApi;                               
         }  
 
@@ -32,7 +31,7 @@ class CriptografiaController extends ApiController {
                 catch(ErrorException $ex){
 
                 }
-                return $this->retorno->response();
+                return $this->_response($this->retorno,200);
         }
 
         function descriptografar_post(){                                

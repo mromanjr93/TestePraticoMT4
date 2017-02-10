@@ -1,7 +1,7 @@
 <?php
-namespace App\Lib\ssh\auth;
+namespace TestePratico\Services\SSH\Autenticacao;
 
-use App\Lib\ssh\interfaces\ISSHAuthentication;
+use TestePratico\Services\SSH\Interfaces\ISSHAuthentication;
 
 final class SSHAuthenticatePassword implements ISSHAuthentication {
         /**

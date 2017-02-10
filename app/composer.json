@@ -18,11 +18,14 @@
             "TestePratico\\AppServices\\Mappings\\" : "src/AppServices/Mappings",
             "TestePratico\\Domain\\Entities\\" : "src/Domain/Entities",
             "TestePratico\\Infrastructure\\Data\\Database\\" : "src/Infrastructure/Data/Database",            
-            "TestePratico\\Infrastructure\\Data\\Repositories\\" : "src/Infrastructure/Data/Repositories"
+            "TestePratico\\Infrastructure\\Data\\Repositories\\" : "src/Infrastructure/Data/Repositories",
+            "TestePratico\\Services\\SSH\\Autenticacao\\" : "src/Services/SSH/Autenticacao",
+            "TestePratico\\Services\\SSH\\States\\" : "src/Services/SSH/States"
         }
     },
     "require": {
         "pimple/pimple": "~3.0",
-        "phpseclib/phpseclib": "^2.0"
+        "phpseclib/phpseclib": "^2.0",
+        "marcj/php-rest-service": "*"
     }
 }

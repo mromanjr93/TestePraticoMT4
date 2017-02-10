@@ -2,8 +2,9 @@
 
 namespace TestePratico\AppServices\Interfaces;
 
-use TestePratico\AppServices\Interfaces\Dtos\SSHDto;
+use TestePratico\AppServices\Dtos\SSHDto;
 
 interface ISSHAppService  {
-    public function conectar(SSHDto $model);
+
+    public function executar(SSHDto $model);
 }

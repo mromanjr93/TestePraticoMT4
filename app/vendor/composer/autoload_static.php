@@ -17,7 +17,9 @@ class ComposerStaticInit63f909c12b898553123d7e935f1e38f7
         ),
         'T' => 
         array (
+            'TestePratico\\Services\\SSH\\States\\' => 33,
             'TestePratico\\Services\\SSH\\Interfaces\\' => 37,
+            'TestePratico\\Services\\SSH\\Autenticacao\\' => 39,
             'TestePratico\\Services\\SSH\\' => 26,
             'TestePratico\\Services\\Interfaces\\' => 33,
             'TestePratico\\Services\\Criptografia\\Interfaces\\' => 46,
@@ -43,9 +45,17 @@ class ComposerStaticInit63f909c12b898553123d7e935f1e38f7
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
+        'TestePratico\\Services\\SSH\\States\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/SSH/States',
+        ),
         'TestePratico\\Services\\SSH\\Interfaces\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Services/SSH/Interfaces',
+        ),
+        'TestePratico\\Services\\SSH\\Autenticacao\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services/SSH/Autenticacao',
         ),
         'TestePratico\\Services\\SSH\\' => 
         array (

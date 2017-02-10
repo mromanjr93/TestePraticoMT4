@@ -10,17 +10,39 @@ class ApiController
     protected $args = Array();
     protected $file = Null;
     public function __construct($request) {
-
         
-        header("Access-Control-Allow-Orgin: *");
-        header("Access-Control-Allow-Methods: *");
-        header("Content-Type: application/json");
+        if (isset($_SERVER['HTTP_ORIGIN'])) {
+            // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
+            // you want to allow, and if so:
+            header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+            header('Access-Control-Allow-Credentials: true');
+            header('Access-Control-Max-Age: 86400');    // cache for 1 day
+        }
+
+        // Access-Control headers are received during OPTIONS requests
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+
+            if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+                // may also be using PUT, PATCH, HEAD etc
+                header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
+
+            if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+                header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+
+            exit(0);
+        }
+        
         $this->args = explode('/', rtrim($request, '/'));
 
         
         $this->endpoint = array_pop($this->args);
         
-        $this->method = $_SERVER['REQUEST_METHOD'];
+        
+        $this->method = $_SERVER['REQUEST_METHOD'];        
+        // if($this->method == 'OPTIONS'){
+        //     $this->method = $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'];            
+        // }
+        
         $this->endpoint .= '_'.strtolower($this->method);
         
         if (array_key_exists(0, $this->args) && !is_numeric($this->args[0])) {
@@ -36,9 +58,9 @@ class ApiController
                 throw new Exception("Unexpected Header");
             }
         }
-        switch($this->method) {
+        switch($this->method) {        
         case 'DELETE':
-        case 'POST':
+        case 'POST':            
             $this->request = $this->_cleanInputs($_POST);
             $this->file = json_decode(file_get_contents("php://input"));
             if($this->file)
@@ -50,7 +72,8 @@ class ApiController
         case 'PUT':
             $this->request = $this->_cleanInputs($_GET);
             $this->file = json_decode(file_get_contents("php://input"));
-            break;        
+            break;  
+              
         default:
             $this->_response('Invalid Method', 405);
             break;

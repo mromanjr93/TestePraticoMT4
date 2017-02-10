@@ -5,6 +5,8 @@ namespace TestePratico\Api\Controllers;
 
 use TestePratico\Api\Retorno\RetornoApi;
 use TestePratico\AppServices\SSHAppService;
+use TestePratico\AppServices\Mappings\MapperFactory;
+
 
 class SSHController extends ApiController {
 
@@ -14,16 +16,17 @@ class SSHController extends ApiController {
                 $this->appService = $appService;                
         }  
 
-        function executar_get(){
-                $retorno = new RetornoApi;
-
+        function executar_post(){                
+                $oSSH = json_decode(file_get_contents("PHP://INPUT")) ;
+                $oSSH = MapperFactory::mapTo($oSSH, '\TestePratico\AppServices\Dtos\SSHDto');
                 try {
-                //   $this->appService->execy
-                        
+                                        
+                     $this->retorno->resultado = $this->appService->executar($oSSH);                        
+                     $this->retorno->sucesso = true;
                 }
-                catch(Exception $ex){
+                catch(ErrorException $ex){
 
                 }
-                return "as";
+                return $this->_response($this->retorno,200);                
         }
 }

@@ -3,14 +3,14 @@
 namespace TestePratico\Services\SSH;
 
 
-use App\Lib\ssh\interfaces\ISSHConnection;
+use TestePratico\Services\SSH\Interfaces\ISSHConnection;
 
 
-use App\Lib\ssh\interfaces\ISSHAuthentication;
+use TestePratico\Services\SSH\Interfaces\ISSHAuthentication;
 
-use App\Lib\ssh\interfaces\ISSHState;
+use TestePratico\Services\SSH\Interfaces\ISSHState;
 
-use App\Lib\ssh\state\SSHStateClosed;
+use TestePratico\Services\SSH\States\SSHStateClosed;
 
 
 class SSHService implements ISSHConnection {
@@ -22,8 +22,8 @@ class SSHService implements ISSHConnection {
         /**
          * Cria o objeto de conexão
          */
-        public function __construct(){
-                $this->state = new SSHStateClosed();
+        public function __construct(){                
+                $this->state = new SSHStateClosed();                
         }
  
         /**

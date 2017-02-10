@@ -7,7 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'phpseclib\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'TestePratico\\Services\\SSH\\States\\' => array($baseDir . '/src/Services/SSH/States'),
     'TestePratico\\Services\\SSH\\Interfaces\\' => array($baseDir . '/src/Services/SSH/Interfaces'),
+    'TestePratico\\Services\\SSH\\Autenticacao\\' => array($baseDir . '/src/Services/SSH/Autenticacao'),
     'TestePratico\\Services\\SSH\\' => array($baseDir . '/src/Services/SSH'),
     'TestePratico\\Services\\Interfaces\\' => array($baseDir . '/src/Services/Interfaces'),
     'TestePratico\\Services\\Criptografia\\Interfaces\\' => array($baseDir . '/src/Services/Criptografia/Interfaces'),
