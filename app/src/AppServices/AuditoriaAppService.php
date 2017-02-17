@@ -47,20 +47,29 @@ class AuditoriaAppService implements IAuditoriaAppService {
      }
 
      public function salvarEmDisco($arquivo, $caminho){        
-        
-        $uploadfile = $caminho . basename($arquivo['file']['name']);        
+        $auditoriaDto = new AuditoriaDto;
+        $uploadfile = $caminho . basename($arquivo['file']['name']); 
+
+        $auditoriaDto->caminhoArquivo = $uploadfile;               
         if(file_exists($uploadfile)){
             if (sha1_file($arquivo['file']['tmp_name']) == sha1_file($uploadfile)) {
                 $this->auditarArquivo(AbstractAuditoriaEnum::ArquivoJaCadastrado);
+                $auditoriaDto->auditoria = $this->state;
             }else{
                 $this->auditarArquivo(AbstractAuditoriaEnum::ArquivoComAlteracoes);
+                $auditoriaDto->auditoria = $this->state;                
+                $this->atualizar($auditoriaDto);
             }
         }
         if (move_uploaded_file($arquivo['file']['tmp_name'], $uploadfile)) {
             $this->auditarArquivo(AbstractAuditoriaEnum::ArquivoEnviadoComSucesso);
+            $auditoriaDto->auditoria = $this->state;                
+            $this->inserir($auditoriaDto);
         } else {
             $this->auditarArquivo(AbstractAuditoriaEnum::ArquivoMalicioso);            
-        }         
+            $auditoriaDto->auditoria = $this->state;                
+            $this->inserir($auditoriaDto);
+        }                 
      }
 
      private function auditarArquivo($state){

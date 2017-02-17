@@ -10,7 +10,7 @@ namespace TestePratico\Infrastructure\Data\Database;
  * @author		Marcelo Roman Junior 
  */
 class Conexao extends \PDO
-{
+{    
     public function __construct($file = 'configuracoes.ini')
     {
         if (!$settings = parse_ini_file($file, TRUE)) throw new exception('Unable to open ' . $file . '.');

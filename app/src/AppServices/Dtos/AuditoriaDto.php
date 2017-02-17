@@ -11,4 +11,7 @@ namespace TestePratico\AppServices\Dtos;
  */
 class AuditoriaDto {
     public $caminhoArquivo;   
+    public $data_cadastro;
+    public $data_alteracao;
+    public $auditoria;
 }
